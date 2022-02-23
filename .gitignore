@@ -1,7 +1,4 @@
 .nyc_output
 node_modules
-server/credentials.js
-server/characteristic_reviews.csv
-server/characteristics.csv
-server/reviews_photos.csv
-server/reviews.csv
+server/db/credentials.js
+server/csv

@@ -3,6 +3,11 @@ const fs = require('fs');
 const csv = require('fast-csv');
 const credentials = require('./credentials');
 
+let phototemp = [];
+let count = 0;
+let temp = 0;
+let idTemp = [];
+
 var config = {
   user: credentials.user,
   password: credentials.password,
@@ -20,9 +25,6 @@ pool.connect(function(err) {
   }
 })
 
-let phototemp = [];
-let temp = 0;
-let idTemp = [];
 
 var transform = function(array) {
   var transform = [];
@@ -32,7 +34,7 @@ var transform = function(array) {
   return transform;
 };
 
-let photos = csv.parseFile('./reviews_photos.csv')
+let photos = csv.parseFile('../csv/reviews_photos.csv')
   .on('data', function(record) {
     photos.pause();
     // var id = record[1];
@@ -42,11 +44,12 @@ let photos = csv.parseFile('./reviews_photos.csv')
       idTemp.push(record[1]);
       let url = JSON.stringify(transform (phototemp));
       if (phototemp.length !== 0) {
-        console.log('now', id_photo);
-        pool.query(`UPDATE review SET photos = ($1) WHERE review_id = ($2);`, [url, id], (err) => {
+        pool.query(`UPDATE review SET photos = ($1) WHERE id = ($2);`, [url, id], (err) => {
           if (err) {
             console.log(err)
           }
+          count ++;
+          console.log('now', count);
         });
       }
       temp = record[1];
@@ -58,7 +61,7 @@ let photos = csv.parseFile('./reviews_photos.csv')
     photos.resume();
   }).on('end', function() {
     let lastURL = JSON.stringify(transform (phototemp));
-    pool.query(`UPDATE review SET photos = ($1) WHERE review_id = ($2);`, [lastURL, idTemp[0]], (err) => {
+    pool.query(`UPDATE review SET photos = ($1) WHERE id = ($2);`, [lastURL, idTemp[0]], (err) => {
       if (err) {
         console.log(err)
       }
