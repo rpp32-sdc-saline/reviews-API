@@ -45,9 +45,9 @@ The goal was to deisgn a backend system that can support the full (retail produc
       <td>
         <img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white">
         <img alt="MOCHA" src="https://img.shields.io/badge/-mocha-%238D6748?style=for-the-badge&logo=mocha&logoColor=white">
-        <img alt="Loader.io" src="https://img.shields.io/badge/-Loader-blacke">
-        <img alt="New Relic" src="https://img.shields.io/badge/-New%20Relic-black">
-        <img alt="K6" src="https://img.shields.io/badge/-K6-purple">
+        <img alt="Loader.io" src="https://img.shields.io/badge/-Loader-black?style=for-the-badge&logo=loader&logoColor=white">
+        <img alt="New Relic" src="https://img.shields.io/badge/-New%20Relic-black?style=for-the-badge&logo=Relic&logoColor=white">
+        <img alt="K6" src="https://img.shields.io/badge/-K6-purple?style=for-the-badge&logo=K6&logoColor=white">
       </td>
     </tr>
     <tr>
