@@ -77,6 +77,9 @@ When tested with loader.io with a maximum of 1200 users per second, registered a
   </tbody>
 </table>
 
+# Application Diagram
+![image](https://user-images.githubusercontent.com/82000132/159100651-86ab0e1b-9b57-45f6-9463-1222bf46429c.png)
+
 # Extra Links
 * Ticketing System: [Trello](https://trello.com/b/o96qO8QZ/rpp32-sdc-saline)
 * Engineering Journals: [Engineering Journals](https://docs.google.com/document/d/1-zNLaD0D6WcOhddN1hnHXZn48k6C0WEt5pxpz56degA/edit)
