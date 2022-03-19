@@ -14,6 +14,9 @@ The goal was to deisgn a backend system that can support the full (retail produc
 * Deployed to AWS EC2 instances
 * Optimized to handle product level traffic, verified by load testing.
 
+When tested with loader.io with a maximum of 1200 users per second, registered an average response time of 6 ms with a 0.0% error rate.
+![image](https://user-images.githubusercontent.com/82000132/159098244-23f412a0-2f0f-46a7-bcab-a30b909e08f9.png)
+
 # 📦 Technologies:
 
 <table>
