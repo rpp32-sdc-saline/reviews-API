@@ -6,7 +6,7 @@ var config = {
   host: credentials.server,
   port: 5432,
   database: credentials.database,
-  idleTimeoutMillis: 0,
+  // idleTimeoutMillis: 0,
 }
 
 module.exports = config;

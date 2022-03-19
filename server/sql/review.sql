@@ -2,8 +2,6 @@
 
 \c reviews;
 
-
-
 CREATE TABLE IF NOT EXISTS characteristic_value(
   id SERIAL PRIMARY KEY NOT NULL,
   product_id INT NOT NULL,
@@ -26,7 +24,6 @@ CREATE TABLE IF NOT EXISTS review (
   photos jsonb default '[]'::jsonb
 );
 
-
 CREATE TABLE IF NOT EXISTS characteristic(
   id SERIAL PRIMARY KEY NOT NULL,
   characteristic_id INT NOT NULL,
@@ -35,10 +32,6 @@ CREATE TABLE IF NOT EXISTS characteristic(
   FOREIGN KEY (review_id) REFERENCES review(id),
   FOREIGN KEY (characteristic_id) REFERENCES characteristic_value(id)
 );
-
-
-
-
 
 -- \COPY review (id, product_id, rating, date, summary, body, recommend, reported, reviewer_name, reviewer_email, response, helpfulness) FROM '/home/yytt77/HackReactor/reviews-API/server/csv/reviews.csv' DELIMITER ',' CSV HEADER;
 -- SELECT setval('review_id_seq', max(id)) from review;

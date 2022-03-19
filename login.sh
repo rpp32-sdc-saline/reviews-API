@@ -1,0 +1,1 @@
+ssh -i "reviewDatabase.pem" ec2-user@ec2-52-202-75-176.compute-1.amazonaws.com

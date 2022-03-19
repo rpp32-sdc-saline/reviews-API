@@ -46,7 +46,7 @@ describe('loading express', function () {
     .expect(404, done);
   });
 
-  it('responds to post /reviews/meta', function testSlash(done) {
+  it('responds to post /reviews', function testSlash(done) {
     request(app)
     .post('/reviews')
     .send({
